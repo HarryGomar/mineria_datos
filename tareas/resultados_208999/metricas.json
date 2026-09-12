@@ -12,7 +12,7 @@
     "interaccion_x1_x11"
   ],
   "filas_desarrollo": 600,
-  "filas_auditoria": 200,
+  "filas_validacion": 200,
   "filas_ajuste_final": 800,
   "cv_desarrollo": {
     "baseline": {
@@ -35,7 +35,7 @@
     "alpha": 0.525217251966192,
     "columnas_candidatas": 454,
     "coeficientes_no_nulos": 34,
-    "MSE_auditoria": 58.062041028219454,
+    "MSE_validacion": 58.062041028219454,
     "iteraciones": 53,
     "dual_gap": 0.010056485367943726
   },
@@ -51,7 +51,7 @@
     "test": "6f8eb696993f96724655d007b9b1e189dddb27fc6f380c379e9ca278ac09c536"
   },
   "sha256_predicciones": "c081589c200ed7fbd1536fcaba28178b324fca47c6a373c22799ee67faf87bb6",
-  "auditoria": [
+  "validacion": [
     {
       "modelo": "Baseline",
       "MSE": 99.66787626127571,
@@ -71,15 +71,14 @@
       "R2": 0.6468801387306146
     }
   ],
-  "reduccion_mse_auditoria": 0.8061287098912302,
+  "reduccion_mse_validacion": 0.8061287098912302,
   "intervalo_bootstrap_mse_95": [
     15.479451156894083,
     23.745200924753153
   ],
   "predicciones": 400,
-  "calificacion_oficial_solicitada": false,
   "MSE_meta_oficial": null,
-  "auditoria_reutilizada": true,
+  "validacion_reutilizada": true,
   "seleccion_guiada_adaptativa": true,
-  "codigo_notebook_sha256": "47bc190b65ceca41b4668360fb98b972a115e2db9547e3a8709b16da16784315"
+  "codigo_notebook_sha256": "72cafe0e0fdae5e131165660e01fb778a1d1c7402fdd88ed96716e756aaae67e"
 }

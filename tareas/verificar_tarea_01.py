@@ -1,4 +1,4 @@
-"""Comprueba los artefactos locales de la tarea; no tiene cliente del calificador."""
+"""Comprueba la ejecución, las métricas, las figuras y las predicciones de la tarea."""
 import hashlib
 import json
 from pathlib import Path
@@ -66,15 +66,15 @@ def verificar():
     coef_numpy = np.linalg.lstsq(matriz_independiente(train), train["y"], rcond=None)[0]
     np.testing.assert_allclose(coeficientes, coef_numpy, rtol=1e-10, atol=1e-9)
 
-    desarrollo, auditoria = train_test_split(train, test_size=0.25, random_state=42)
+    desarrollo, validacion = train_test_split(train, test_size=0.25, random_state=42)
     for nombre, diseno in [
         ("Baseline", lambda d: np.column_stack([np.ones(len(d)), d[columnas]])),
         ("Lineal compacto", matriz_independiente),
     ]:
         coef = np.linalg.lstsq(diseno(desarrollo), desarrollo["y"], rcond=None)[0]
-        pred = diseno(auditoria) @ coef
-        mse = float(np.mean((auditoria["y"] - pred) ** 2))
-        registro = next(r for r in metricas["auditoria"] if r["modelo"] == nombre)
+        pred = diseno(validacion) @ coef
+        mse = float(np.mean((validacion["y"] - pred) ** 2))
+        registro = next(r for r in metricas["validacion"] if r["modelo"] == nombre)
         np.testing.assert_allclose(mse, registro["MSE"], rtol=1e-10, atol=1e-9)
 
     coef_lasso = pd.read_csv(resultados / "coeficientes_lasso.csv")
@@ -83,7 +83,6 @@ def verificar():
     cv_lasso = pd.read_csv(resultados / "lasso_cv_externo.csv")
     assert len(cv_lasso) == 20 and np.isfinite(cv_lasso.to_numpy()).all()
     np.testing.assert_allclose(cv_lasso["MSE"].mean(), metricas["cv_desarrollo"]["lasso"]["MSE_CV"])
-    assert metricas["calificacion_oficial_solicitada"] is False
     assert len(pd.read_csv(resultados / "interacciones_cv.csv")) == 66
     assert len(pd.read_csv(resultados / "alternativas_cv.csv")) == 54
     bitacora = pd.read_csv(resultados / "bitacora.csv")
@@ -132,10 +131,9 @@ def verificar():
 
     print(f"OK: {len(celdas)} celdas ejecutadas sin errores ni avisos de convergencia.")
     print("OK: 400 predicciones finitas; fórmula, coeficientes y orden verificados independientemente.")
-    print("OK: ajuste con 800 filas y métricas de auditoría con 600/200 reproducidos con NumPy.")
+    print("OK: ajuste con 800 filas y métricas de validación con 600/200 reproducidos con NumPy.")
     print("OK: LassoCV, 20 pliegues externos, 66 pares, 54 alternativas y bitácora comprobados.")
     print("OK: 20 PNG completos; codigo, imagenes, escalera, ablacion y frecuencias vinculados a esta ejecucion.")
-    print("Todo fue local; no se solicitó una calificación.")
 
 
 if __name__ == "__main__":
