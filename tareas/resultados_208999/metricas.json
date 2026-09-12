@@ -17,17 +17,17 @@
   "cv_desarrollo": {
     "baseline": {
       "MSE_CV": 104.66551268297876,
-      "DE_pliegues": 15.090983818116012,
+      "DE_pliegues": 15.090983818116001,
       "columnas": 12
     },
     "compacto": {
-      "MSE_CV": 19.594995186384907,
-      "DE_pliegues": 2.583786236190753,
+      "MSE_CV": 19.59499518638491,
+      "DE_pliegues": 2.5837862361907526,
       "columnas": 7
     },
     "lasso": {
       "MSE_CV": 57.34923663799975,
-      "DE_pliegues": 6.783958717838354,
+      "DE_pliegues": 6.78395871783836,
       "columnas": 454
     }
   },
@@ -37,7 +37,7 @@
     "coeficientes_no_nulos": 34,
     "MSE_auditoria": 58.062041028219454,
     "iteraciones": 53,
-    "dual_gap": 0.010056485367955854
+    "dual_gap": 0.010056485367943726
   },
   "seleccion_en_desarrollo": "Compacto",
   "versiones": {
@@ -50,7 +50,7 @@
     "train": "9829ae5d18cb0ef8ec51ab368028325d0822fadad2f5f235ddc042d02ddca859",
     "test": "6f8eb696993f96724655d007b9b1e189dddb27fc6f380c379e9ca278ac09c536"
   },
-  "sha256_predicciones": "424e6fb0f4ec441a0843cc5fc24bcc77a0139f987d9570cbb6132dfa3298231e",
+  "sha256_predicciones": "c081589c200ed7fbd1536fcaba28178b324fca47c6a373c22799ee67faf87bb6",
   "auditoria": [
     {
       "modelo": "Baseline",
@@ -60,7 +60,7 @@
     },
     {
       "modelo": "Lineal compacto",
-      "MSE": 19.32273975317476,
+      "MSE": 19.322739753174755,
       "RMSE": 4.395763841833949,
       "R2": 0.8824835803193818
     },
@@ -73,9 +73,13 @@
   ],
   "reduccion_mse_auditoria": 0.8061287098912302,
   "intervalo_bootstrap_mse_95": [
-    15.479451156894077,
-    23.74520092475315
+    15.479451156894083,
+    23.745200924753153
   ],
   "predicciones": 400,
-  "calificacion_oficial_solicitada": false
+  "calificacion_oficial_solicitada": false,
+  "MSE_meta_oficial": null,
+  "auditoria_reutilizada": true,
+  "seleccion_guiada_adaptativa": true,
+  "codigo_notebook_sha256": "47bc190b65ceca41b4668360fb98b972a115e2db9547e3a8709b16da16784315"
 }

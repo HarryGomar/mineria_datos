@@ -5,6 +5,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from PIL import Image
 from sklearn.model_selection import train_test_split
 
 
@@ -34,6 +35,10 @@ def verificar():
         compile("".join(celda["source"]), "<celda>", "exec")
         assert not any(o["output_type"] == "error" for o in celda["outputs"])
         assert "ConvergenceWarning" not in json.dumps(celda["outputs"])
+    codigo = "\n\n".join("".join(c["source"]) for c in celdas)
+    assert hashlib.sha256(codigo.encode()).hexdigest() == metricas["codigo_notebook_sha256"], (
+        "El codigo cambio despues de generar los resultados. Ejecuta de nuevo el notebook."
+    )
 
     train, test = (pd.read_csv(datos / f"{nombre}.csv") for nombre in ["train", "test"])
     columnas = [f"x{i}" for i in range(1, 13)]
@@ -87,10 +92,49 @@ def verificar():
                    "residuales_compacto.png", "09_comparacion_lasso.png"]:
         assert (resultados / nombre).is_file(), f"Falta la figura {nombre}."
 
+    # Relaciona las cifras publicadas con los pliegues y experimentos exportados.
+    pliegues = pd.read_csv(resultados / "comparacion_pliegues.csv")
+    assert pliegues.shape == (20, 4) and np.isfinite(pliegues.to_numpy()).all()
+    np.testing.assert_array_equal(pliegues["pliegue"], np.arange(1, 21))
+    for modelo in ["baseline", "compacto", "lasso"]:
+        np.testing.assert_allclose(pliegues[modelo].mean(), metricas["cv_desarrollo"][modelo]["MSE_CV"])
+        np.testing.assert_allclose(pliegues[modelo].std(ddof=1), metricas["cv_desarrollo"][modelo]["DE_pliegues"])
+    np.testing.assert_allclose(pliegues["lasso"], cv_lasso["MSE"])
+    escalera = pd.read_csv(resultados / "escalera_cv.csv")
+    assert len(escalera) == 8
+    np.testing.assert_allclose(escalera["MSE_CV"].iloc[:-1], bitacora["MSE_antes"].iloc[:7])
+    np.testing.assert_allclose(escalera["MSE_CV"].iloc[1:], bitacora["MSE_despues"].iloc[:7])
+    ablacion = pd.read_csv(resultados / "ablacion_cv.csv")
+    assert list(ablacion["retirado"]) == ["ninguno", *metricas["columnas"]]
+    np.testing.assert_allclose(ablacion["aumento_MSE"], ablacion["MSE_CV"] - pliegues["compacto"].mean(), atol=1e-10)
+    frecuencias = pd.read_csv(resultados / "frecuencia_x4_cv.csv")
+    assert len(frecuencias) == 14
+    referencia = frecuencias.loc[(frecuencias["familia"] == "seno") & (frecuencias["frecuencia"] == 1)]
+    np.testing.assert_allclose(referencia["MSE_CV"], pliegues["compacto"].mean())
+    exponencial = pd.read_csv(resultados / "exponencial_cv.csv")
+    assert len(exponencial) == 4
+    con_resto = exponencial.loc[exponencial["contexto"] == "Con los demás términos"].set_index("forma")
+    np.testing.assert_allclose(con_resto.loc["exponencial", "MSE_CV"], bitacora.loc[7, "MSE_despues"])
+    np.testing.assert_allclose(con_resto.loc["cuadrado", "MSE_CV"], bitacora.loc[7, "MSE_antes"])
+
+    # Verifica cada PNG completo, sus dimensiones y la huella de esta ejecución.
+    figuras = json.loads((resultados / "figuras_manifest.json").read_text(encoding="utf-8"))
+    assert len(figuras) == 20
+    assert {f["archivo"] for f in figuras} == {p.name for p in resultados.glob("*.png")}
+    for figura in figuras:
+        archivo = resultados / figura["archivo"]
+        assert hashlib.sha256(archivo.read_bytes()).hexdigest() == figura["sha256"], archivo.name
+        with Image.open(archivo) as imagen:
+            assert imagen.format == "PNG"
+            assert imagen.size == (figura["ancho"], figura["alto"])
+            assert imagen.width >= 1500 and imagen.height >= 650
+            imagen.verify()
+
     print(f"OK: {len(celdas)} celdas ejecutadas sin errores ni avisos de convergencia.")
     print("OK: 400 predicciones finitas; fórmula, coeficientes y orden verificados independientemente.")
     print("OK: ajuste con 800 filas y métricas de auditoría con 600/200 reproducidos con NumPy.")
     print("OK: LassoCV, 20 pliegues externos, 66 pares, 54 alternativas y bitácora comprobados.")
+    print("OK: 20 PNG completos; codigo, imagenes, escalera, ablacion y frecuencias vinculados a esta ejecucion.")
     print("Todo fue local; no se solicitó una calificación.")
 
 

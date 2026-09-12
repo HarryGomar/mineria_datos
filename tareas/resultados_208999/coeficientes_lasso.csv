@@ -2,14 +2,14 @@ termino,coeficiente_estandarizado,activo
 x1,-0.0,False
 x2,-0.0,False
 x3,-0.0,False
-x4,-0.926713192609462,True
+x4,-0.926713192609463,True
 x5,0.0,False
-x6,1.4348671428031416,True
+x6,1.4348671428031423,True
 x7,0.0,False
 x8,-0.0,False
 x9,0.0,False
 x10,-0.0,False
-x11,1.9093162222569724,True
+x11,1.909316222256973,True
 x12,0.0,False
 x1^2,-0.0,False
 x1 x2,-0.0,False
@@ -23,7 +23,7 @@ x1 x9,-0.0,False
 x1 x10,0.0,False
 x1 x11,4.07262170318626,True
 x1 x12,-0.0,False
-x2^2,2.5557504876642074,True
+x2^2,2.5557504876642057,True
 x2 x3,0.0,False
 x2 x4,0.0,False
 x2 x5,0.0,False
@@ -51,7 +51,7 @@ x4 x7,0.05799478113838669,True
 x4 x8,-0.0,False
 x4 x9,-0.0,False
 x4 x10,0.0,False
-x4 x11,0.30706438168802547,True
+x4 x11,0.30706438168802563,True
 x4 x12,-0.0,False
 x5^2,-0.0,False
 x5 x6,0.0,False
@@ -64,7 +64,7 @@ x5 x12,0.0,False
 x6^2,-0.0,False
 x6 x7,0.0,False
 x6 x8,-0.0,False
-x6 x9,0.2663001622092249,True
+x6 x9,0.2663001622092256,True
 x6 x10,0.0,False
 x6 x11,0.0,False
 x6 x12,-0.0,False
@@ -79,7 +79,7 @@ x8 x9,-0.0,False
 x8 x10,0.0,False
 x8 x11,0.0,False
 x8 x12,0.0,False
-x9^2,3.196767409446808,True
+x9^2,3.196767409446807,True
 x9 x10,-0.0,False
 x9 x11,0.0,False
 x9 x12,0.0,False
@@ -94,7 +94,7 @@ x1^2 x2,0.0,False
 x1^2 x3,-0.0,False
 x1^2 x4,-0.0,False
 x1^2 x5,-0.0,False
-x1^2 x6,0.34261207538025545,True
+x1^2 x6,0.3426120753802541,True
 x1^2 x7,0.0,False
 x1^2 x8,-0.0,False
 x1^2 x9,0.0,False
@@ -104,7 +104,7 @@ x1^2 x12,-0.0,False
 x1 x2^2,-0.0,False
 x1 x2 x3,-0.0,False
 x1 x2 x4,-0.0,False
-x1 x2 x5,0.04805310590977802,True
+x1 x2 x5,0.048053105909778404,True
 x1 x2 x6,-0.0,False
 x1 x2 x7,-0.0,False
 x1 x2 x8,-0.0,False
@@ -139,7 +139,7 @@ x1 x5 x9,0.0,False
 x1 x5 x10,0.0,False
 x1 x5 x11,-0.0,False
 x1 x5 x12,0.0,False
-x1 x6^2,0.03937014318926307,True
+x1 x6^2,0.039370143189263254,True
 x1 x6 x7,0.0,False
 x1 x6 x8,0.0,False
 x1 x6 x9,0.0,False
@@ -165,25 +165,25 @@ x1 x10^2,0.0,False
 x1 x10 x11,0.0,False
 x1 x10 x12,-0.0,False
 x1 x11^2,0.0,False
-x1 x11 x12,0.007191599267144684,True
+x1 x11 x12,0.007191599267144116,True
 x1 x12^2,0.0,False
 x2^3,0.0,False
 x2^2 x3,0.0,False
 x2^2 x4,0.0,False
 x2^2 x5,-0.0,False
-x2^2 x6,0.29455308220630966,True
+x2^2 x6,0.29455308220631077,True
 x2^2 x7,0.0,False
 x2^2 x8,-0.0,False
-x2^2 x9,1.6987127903002488,True
+x2^2 x9,1.69871279030025,True
 x2^2 x10,-0.0,False
-x2^2 x11,0.09066309298689273,True
+x2^2 x11,0.09066309298689264,True
 x2^2 x12,0.0,False
 x2 x3^2,0.0,False
 x2 x3 x4,0.0,False
 x2 x3 x5,-0.0,False
 x2 x3 x6,-0.0,False
 x2 x3 x7,0.0,False
-x2 x3 x8,-0.08142652154400616,True
+x2 x3 x8,-0.08142652154400654,True
 x2 x3 x9,0.0,False
 x2 x3 x10,0.0,False
 x2 x3 x11,-0.0,False
@@ -192,13 +192,13 @@ x2 x4^2,0.0,False
 x2 x4 x5,0.0,False
 x2 x4 x6,-0.0,False
 x2 x4 x7,0.0,False
-x2 x4 x8,-0.05067734981311169,True
+x2 x4 x8,-0.050677349813112074,True
 x2 x4 x9,-0.0,False
 x2 x4 x10,-0.0,False
 x2 x4 x11,-0.0,False
 x2 x4 x12,0.0,False
 x2 x5^2,0.0,False
-x2 x5 x6,0.26294199953991515,True
+x2 x5 x6,0.2629419995399149,True
 x2 x5 x7,-0.0,False
 x2 x5 x8,-0.0,False
 x2 x5 x9,-0.0,False
@@ -219,7 +219,7 @@ x2 x7 x10,-0.0,False
 x2 x7 x11,-0.0,False
 x2 x7 x12,0.0,False
 x2 x8^2,0.0,False
-x2 x8 x9,-0.2146985249244839,True
+x2 x8 x9,-0.21469852492448419,True
 x2 x8 x10,-0.0,False
 x2 x8 x11,-0.0,False
 x2 x8 x12,-0.0,False
@@ -272,7 +272,7 @@ x3 x7 x8,-0.0,False
 x3 x7 x9,0.0,False
 x3 x7 x10,-0.0,False
 x3 x7 x11,0.0,False
-x3 x7 x12,-0.20267894149049617,True
+x3 x7 x12,-0.20267894149049692,True
 x3 x8^2,-0.0,False
 x3 x8 x9,-0.0,False
 x3 x8 x10,-0.0,False
@@ -288,7 +288,7 @@ x3 x10 x12,0.0,False
 x3 x11^2,-0.0,False
 x3 x11 x12,0.0,False
 x3 x12^2,-0.0,False
-x4^3,-0.0041238392189616,True
+x4^3,-0.004123839218960084,True
 x4^2 x5,0.0,False
 x4^2 x6,0.0,False
 x4^2 x7,0.0,False
@@ -310,13 +310,13 @@ x4 x6 x7,0.0,False
 x4 x6 x8,-0.0,False
 x4 x6 x9,0.0,False
 x4 x6 x10,0.0,False
-x4 x6 x11,0.17752889003068406,True
+x4 x6 x11,0.17752889003068367,True
 x4 x6 x12,-0.0,False
 x4 x7^2,-0.0,False
 x4 x7 x8,-0.0,False
 x4 x7 x9,0.0,False
 x4 x7 x10,0.0,False
-x4 x7 x11,0.014362884476592334,True
+x4 x7 x11,0.014362884476592808,True
 x4 x7 x12,0.0,False
 x4 x8^2,-0.0,False
 x4 x8 x9,-0.0,False
@@ -327,7 +327,7 @@ x4 x9^2,-0.0,False
 x4 x9 x10,-0.0,False
 x4 x9 x11,0.0,False
 x4 x9 x12,0.0,False
-x4 x10^2,-0.17743745063161334,True
+x4 x10^2,-0.1774374506316137,True
 x4 x10 x11,0.0,False
 x4 x10 x12,0.0,False
 x4 x11^2,-0.0,False
@@ -335,7 +335,7 @@ x4 x11 x12,0.0,False
 x4 x12^2,-0.0,False
 x5^3,-0.0,False
 x5^2 x6,-0.0,False
-x5^2 x7,0.5038482817612893,True
+x5^2 x7,0.5038482817612888,True
 x5^2 x8,-0.0,False
 x5^2 x9,-0.0,False
 x5^2 x10,-0.0,False
@@ -374,7 +374,7 @@ x6^2 x7,-0.0,False
 x6^2 x8,-0.0,False
 x6^2 x9,-0.0,False
 x6^2 x10,0.0,False
-x6^2 x11,0.1553517945218673,True
+x6^2 x11,0.15535179452186815,True
 x6^2 x12,-0.0,False
 x6 x7^2,0.0,False
 x6 x7 x8,-0.0,False
@@ -391,7 +391,7 @@ x6 x9^2,0.0,False
 x6 x9 x10,0.0,False
 x6 x9 x11,0.0,False
 x6 x9 x12,-0.0,False
-x6 x10^2,0.037778467768970446,True
+x6 x10^2,0.037778467768968836,True
 x6 x10 x11,-0.0,False
 x6 x10 x12,-0.0,False
 x6 x11^2,0.0,False
@@ -401,10 +401,10 @@ x7^3,5.256048151027482,True
 x7^2 x8,-0.0,False
 x7^2 x9,0.0,False
 x7^2 x10,0.0,False
-x7^2 x11,0.3125495076625383,True
+x7^2 x11,0.31254950766253814,True
 x7^2 x12,0.0,False
 x7 x8^2,0.0,False
-x7 x8 x9,-0.08282377292740471,True
+x7 x8 x9,-0.08282377292740442,True
 x7 x8 x10,0.0,False
 x7 x8 x11,-0.0,False
 x7 x8 x12,-0.0,False
@@ -417,7 +417,7 @@ x7 x10 x11,0.4370360303278047,True
 x7 x10 x12,0.0,False
 x7 x11^2,0.0,False
 x7 x11 x12,-0.0,False
-x7 x12^2,0.10357068170500391,True
+x7 x12^2,0.10357068170500372,True
 x8^3,-0.0,False
 x8^2 x9,0.0,False
 x8^2 x10,-0.0,False
@@ -429,7 +429,7 @@ x8 x9 x11,-0.0,False
 x8 x9 x12,0.0,False
 x8 x10^2,-0.0,False
 x8 x10 x11,0.0,False
-x8 x10 x12,-0.055093346309266725,True
+x8 x10 x12,-0.05509334630926644,True
 x8 x11^2,-0.0,False
 x8 x11 x12,-0.0,False
 x8 x12^2,-0.0,False

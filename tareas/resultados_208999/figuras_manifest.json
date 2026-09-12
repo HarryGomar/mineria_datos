@@ -1,0 +1,122 @@
+[
+  {
+    "archivo": "01_distribuciones.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "2986dbe73453c2b03b9656a748a83dac24d424a65d52b0bbe2d2b6d00e8261cf"
+  },
+  {
+    "archivo": "02_respuesta.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "d0a5241a5923d5e139eb5556c9c225deec685d040d766e0c743b8dac1a29c17c"
+  },
+  {
+    "archivo": "03_correlacion.png",
+    "ancho": 1857,
+    "alto": 1803,
+    "sha256": "b67d4979ae462a4dcfb3fcc05941ea20b4d4551f9a3d906a0a28e93d40ade0eb"
+  },
+  {
+    "archivo": "04_residuales_baseline.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "a0aec208e8423eafe910ba8001c7c51c98070a3e925fa0a59a835e5f192ec7ff"
+  },
+  {
+    "archivo": "05_residuales_aditivo.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "feda770597f96a72ce4526d19e33bc6d81e535c6067abf3d5f6199299c04999b"
+  },
+  {
+    "archivo": "06_interaccion.png",
+    "ancho": 2691,
+    "alto": 903,
+    "sha256": "4efad7a14bb67e860a8cb9573a6f593b1d49801d1947d34939aefaa14829d021"
+  },
+  {
+    "archivo": "07_residuales_auditoria.png",
+    "ancho": 2515,
+    "alto": 1623,
+    "sha256": "b7c8b14057220997a489d3b7145f503a39cc71bedbc6ec1071cdfe56ba3d0f62"
+  },
+  {
+    "archivo": "08_auditoria.png",
+    "ancho": 2151,
+    "alto": 1803,
+    "sha256": "2c17675fb6cb748e1016369ef25dfbe55e7c37d466c3f3e340a4707a0b230561"
+  },
+  {
+    "archivo": "09_comparacion_lasso.png",
+    "ancho": 2331,
+    "alto": 903,
+    "sha256": "24c8bf9aac6417be5f5698a1c2fc3ff7dd5f6c35656e751672f985dde797bc47"
+  },
+  {
+    "archivo": "10_progreso_modelos.png",
+    "ancho": 2150,
+    "alto": 1263,
+    "sha256": "0a0f47d8871942103bbd3f6b61f71bc70ed557f93c963cbcf9c41afcfab7c369"
+  },
+  {
+    "archivo": "11_ablacion_terminos.png",
+    "ancho": 2151,
+    "alto": 1083,
+    "sha256": "fab9765486561ac841603a1a0523d02b3993fd716806fa3cba1fab77addea1d8"
+  },
+  {
+    "archivo": "12_formas_funcionales.png",
+    "ancho": 2331,
+    "alto": 903,
+    "sha256": "41e7b10060d795c3bb5953139dd26dd654f357df3025e4e5238ba59768c94ca6"
+  },
+  {
+    "archivo": "hipotesis_exponencial.png",
+    "ancho": 2151,
+    "alto": 903,
+    "sha256": "da49e70bf23d33406148dd14009e93e1e4de89696fb9675a14c84176c072a48a"
+  },
+  {
+    "archivo": "residuales_compacto.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "9bdc4446a8c293cf2f4520edcc7c71432598b155ec2105988fb5497d8a3acc70"
+  },
+  {
+    "archivo": "residuales_paso_01.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "696cc199703dc4f5769fe79ddfcaf8837b2eaf7212b997f422cae8c8b1fc8390"
+  },
+  {
+    "archivo": "residuales_paso_02.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "3da31f46e5d97fbd5aa4f33569cd5a5b89da029d5074ab486b2143179fbd5e5e"
+  },
+  {
+    "archivo": "residuales_paso_03.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "760929fc8cfbf013e1da4b8b50dfd726cd2d396700c85ff3f8112ea0fca286ed"
+  },
+  {
+    "archivo": "residuales_paso_04.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "2483d1844d1211d8e91aba41f9ae965320ec063bc204581d75bf30411629bdad"
+  },
+  {
+    "archivo": "residuales_paso_05.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "db7e67762906e44ee8b309d5a1c9710b2c3e81522b94bef6f9f213636232c578"
+  },
+  {
+    "archivo": "residuales_paso_06.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "7ebd358ffa04a0f36688cd7e0080f59644e92ce28dcbd99f2bdd2de5f6d6bc18"
+  }
+]
