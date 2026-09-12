@@ -1,0 +1,12 @@
+paso,hipotesis,evidencia,cambio,MSE_antes,MSE_despues,origen,decision
+1,x2 tiene curvatura cuadrática,04_residuales_baseline.png → residuales_paso_01.png,+ x2_cuadrado,104.66551268297876,83.342852437056,IA,Conservar
+2,x4 contiene una oscilación,residuales_paso_01.png → residuales_paso_02.png,+ seno_x4,83.342852437056,65.90442153961841,IA,Conservar
+3,x6 responde de forma logarítmica,residuales_paso_02.png → residuales_paso_03.png,+ log_x6,65.90442153961841,58.85337469919426,IA,Conservar
+4,x7 requiere un término cúbico,residuales_paso_03.png → residuales_paso_04.png,+ x7_cubo,58.85337469919426,51.020516635650424,IA,Conservar
+5,x9 contiene un cambio de nivel,residuales_paso_04.png → residuales_paso_05.png,+ escalon_x9,51.020516635650424,47.01675917540969,IA,Conservar
+6,La pendiente de x11 depende de x1,06_interaccion.png; interacciones_cv.csv,+ interacción x1*x11,47.01675917540969,20.067056101428086,IA,Conservar
+7,Las columnas crudas sobrantes agregan varianza,residuales_compacto.png; sensibilidad_cv.csv,Compacto: siete columnas,20.067056101428086,19.594995186384907,IA,Conservar
+8,Una exponencial explica mejor x2 que un cuadrado,hipotesis_exponencial.png,x2² → exp(0.5*x2),20.067056101428086,20.748956793899787,IA,Descartar
+9,log1p(x6) mejora log(x6),alternativas_cv.csv,log(x6) → log1p(x6),19.594995186384907,20.450587474859866,IA,Descartar
+10,sqrt(x6) mejora log(x6),alternativas_cv.csv,log(x6) → sqrt(x6),19.594995186384907,21.49332337067474,IA,Descartar
+11,El diccionario polinomial regularizado supera el modelo guiado,09_comparacion_lasso.png,Polinomio grado 3 + LassoCV,19.594995186384907,57.34923663799975,IA,Referencia
