@@ -77,8 +77,8 @@
     23.745200924753153
   ],
   "predicciones": 400,
-  "MSE_meta_oficial": null,
+  "MSE_meta_oficial": 20.32,
   "validacion_reutilizada": true,
   "seleccion_guiada_adaptativa": true,
-  "codigo_notebook_sha256": "4f8edda102ea59d7222a247352a7107c0634a38adfa778b7739de9dab5c4bf19"
+  "codigo_notebook_sha256": "69599b0c69e13b04ae62a4ce8896408521577b0431e9ac775008208292d56b57"
 }
