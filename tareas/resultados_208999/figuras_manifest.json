@@ -72,6 +72,24 @@
     "sha256": "929b15db5f067e801d9d0dd725d7649923b6f2ad51464f68c5ac80e8372af1c5"
   },
   {
+    "archivo": "13_alternativas_x6.png",
+    "ancho": 2331,
+    "alto": 903,
+    "sha256": "e8d6192ab4da17575115d2de37bccef7160b8d87db1fa19e92027c8b58f31eb5"
+  },
+  {
+    "archivo": "14_sensibilidad_variables.png",
+    "ancho": 2150,
+    "alto": 903,
+    "sha256": "4558a37cbba5cce5d752371ff910ace0b480d9f54b8c9be609f785912b70c84a"
+  },
+  {
+    "archivo": "15_comparacion_polinomios.png",
+    "ancho": 2148,
+    "alto": 903,
+    "sha256": "1e16adb44138b28ca22902d35011c161a3063067b909ead5e9b7f7359633c0cf"
+  },
+  {
     "archivo": "hipotesis_exponencial.png",
     "ancho": 2151,
     "alto": 903,

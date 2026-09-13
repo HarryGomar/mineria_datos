@@ -1,6 +1,7 @@
 """Comprueba la ejecución, las métricas, las figuras y las predicciones de la tarea."""
 import hashlib
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -87,6 +88,10 @@ def verificar():
     assert len(pd.read_csv(resultados / "alternativas_cv.csv")) == 54
     bitacora = pd.read_csv(resultados / "bitacora.csv")
     assert (bitacora["decision"] == "Descartar").any()
+    for fila in bitacora.itertuples():
+        graficas = re.findall(r"[\w.-]+\.png", fila.evidencia)
+        assert graficas, f"La hipótesis {fila.paso} no tiene gráfica."
+        assert all((resultados / nombre).is_file() for nombre in graficas)
     for nombre in [*(f"residuales_paso_{i:02d}.png" for i in range(1, 7)),
                    "residuales_compacto.png", "09_comparacion_lasso.png"]:
         assert (resultados / nombre).is_file(), f"Falta la figura {nombre}."
@@ -118,7 +123,7 @@ def verificar():
 
     # Verifica cada PNG completo, sus dimensiones y la huella de esta ejecución.
     figuras = json.loads((resultados / "figuras_manifest.json").read_text(encoding="utf-8"))
-    assert len(figuras) == 20
+    assert len(figuras) == 23
     assert {f["archivo"] for f in figuras} == {p.name for p in resultados.glob("*.png")}
     for figura in figuras:
         archivo = resultados / figura["archivo"]
@@ -133,7 +138,7 @@ def verificar():
     print("OK: 400 predicciones finitas; fórmula, coeficientes y orden verificados independientemente.")
     print("OK: ajuste con 800 filas y métricas de validación con 600/200 reproducidos con NumPy.")
     print("OK: LassoCV, 20 pliegues externos, 66 pares, 54 alternativas y bitácora comprobados.")
-    print("OK: 20 PNG completos; codigo, imagenes, escalera, ablacion y frecuencias vinculados a esta ejecucion.")
+    print("OK: 23 PNG completos; codigo, imagenes, escalera, ablacion y frecuencias vinculados a esta ejecucion.")
 
 
 if __name__ == "__main__":
